@@ -1,0 +1,3 @@
+com\answer1991\account\entity\TestTableGenerator.class
+com\answer1991\account\dao\TestUserDao.class
+com\answer1991\account\dao\service\TestUserService.class

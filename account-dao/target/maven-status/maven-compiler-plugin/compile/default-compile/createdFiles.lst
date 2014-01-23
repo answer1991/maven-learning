@@ -1,0 +1,16 @@
+com\answer1991\account\dao\service\UserService.class
+com\answer1991\account\dao\ValidatorValueDao.class
+com\answer1991\account\entity\User.class
+com\answer1991\account\dao\service\impl\ValidatorValueServiceImpl.class
+com\answer1991\account\dao\UserActiveCodeDao.class
+com\answer1991\account\dao\impl\UserDaoImpl.class
+com\answer1991\account\dao\service\pojo\InputUserInfo.class
+com\answer1991\account\dao\service\impl\UserServiceImpl.class
+com\answer1991\account\entity\ValidatorValue.class
+com\answer1991\account\entity\UserActiveCode.class
+com\answer1991\account\dao\impl\ValidatorValueDaoImpl.class
+com\answer1991\account\dao\BaseDao.class
+com\answer1991\account\dao\UserDao.class
+com\answer1991\account\dao\service\ValidatorValueService.class
+com\answer1991\account\dao\impl\UserActiveCodeDaoImpl.class
+com\answer1991\account\dao\impl\BaseDaoImpl.class

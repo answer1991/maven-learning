@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="com.answer1991.account.entity.TestTableGenerator">
+        <methods>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="test"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- com.answer1991.account.entity.TestTableGenerator -->
+      <class name="com.answer1991.account.dao.service.TestUserService">
+        <methods>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="testFindUserByEmail"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="testRegister"/>
+        </methods>
+      </class> <!-- com.answer1991.account.dao.service.TestUserService -->
+      <class name="com.answer1991.account.dao.TestUserDao">
+        <methods>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="beforeTx"/>
+          <include name="afterTx"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="testInsert"/>
+        </methods>
+      </class> <!-- com.answer1991.account.dao.TestUserDao -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

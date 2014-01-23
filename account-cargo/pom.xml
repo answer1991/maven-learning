@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.answer1991</groupId>
+		<artifactId>account</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>account-cargo</artifactId>
+	<packaging>pom</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.answer1991</groupId>
+			<artifactId>account-ear</artifactId>
+			<version>${project.version}</version>
+			<type>ear</type>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.cargo</groupId>
+				<artifactId>cargo-maven2-plugin</artifactId>
+				<configuration>
+					<container>
+						<containerId>glassfish4x</containerId>
+						<type>installed</type>
+						<home>C:\develop\glassfish4</home>
+					</container>
+					<configuration>
+						<type>existing</type>
+						<home>C:\develop\glassfish4\glassfish\domains</home>
+						<properties>
+							<cargo.hostname>localhost</cargo.hostname>
+							<cargo.servlet.port>8082</cargo.servlet.port>
+							<cargo.remote.username>admin</cargo.remote.username>
+							<cargo.remote.password>010203</cargo.remote.password>
+						</properties>
+					</configuration>
+
+					<deployables>
+						<deployable>
+							<groupId>com.answer1991</groupId>
+							<artifactId>account-ear</artifactId>
+							<type>ear</type>
+						</deployable>
+					</deployables>
+				</configuration>
+				<executions>
+					<execution>
+						<id>deploy-cargo</id>
+						<phase>pre-integration-test</phase>
+						<goals>
+							<goal>deployer-deploy</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>undeploy-cargo</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>deployer-undeploy</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
