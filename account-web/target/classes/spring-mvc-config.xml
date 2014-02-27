@@ -19,8 +19,9 @@
 		</property>
 	</bean>
 	
-	<mvc:annotation-driven ignoreDefaultModelOnRedirect="true"/>
+	<mvc:annotation-driven ignore-default-model-on-redirect="true" />
 	<mvc:default-servlet-handler />
+	
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
